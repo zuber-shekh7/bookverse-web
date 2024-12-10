@@ -1,5 +1,7 @@
 import "../../globals.css";
 
+import Navbar from "../components/UI/Navbar";
+
 export const metadata = {
   title: "Bookverse",
   description: "Best Place to Buy Books",
@@ -8,7 +10,10 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <main>{children}</main>
+      </body>
     </html>
   );
 };
