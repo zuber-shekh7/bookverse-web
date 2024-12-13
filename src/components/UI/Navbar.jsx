@@ -1,30 +1,36 @@
 import Link from "next/link";
+import Input from "./Input";
 
 const Navbar = () => {
   return (
-    <nav className="border-b border-gray-200 px-5 py-5">
-      <section className="container mx-auto flex justify-between items-center">
-        <section>
-          <Link href="/">
-            <h1 className="font-bold text-2xl underline">BookVerse</h1>
-          </Link>
+    <nav className="px-5 py-5">
+      <section className="container mx-auto grid grid-cols-12 items-center">
+        {/* LOGO */}
+        <section className="col-span-1">
+          <section className="flex justify-start items-center">
+            <div className="bg-black p-2 rounded-tr-md rounded-br-md">
+              <Link href="/">
+                <h1 className="font-bold text-white text-2xl">BV</h1>
+              </Link>
+            </div>
+          </section>
         </section>
-        <section>
+        <section className="col-span-10 mx-12">
+          <section>
+            <Input
+              className="text-center rounded-full border-black border-2"
+              placeholder={"Search Books, Authors & Genres."}
+            />
+          </section>
+        </section>
+
+        {/* LINKS */}
+        <section className="col-span-1">
           <ul className="flex justify-around items-center gap-x-2">
             <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/admin/dashboard">Dashbord</Link>
-            </li>
-            <li>
-              <Link href="/users/register">Register</Link>
-            </li>
-            <li>
-              <Link href="/users/login">Login</Link>
-            </li>
-            <li>
-              <Link href="/admin/login">Sign-in</Link>
+              <div className="bg-black p-2 px-5 rounded-xl text-white">
+                <Link href="/users/register">Login</Link>
+              </div>
             </li>
           </ul>
         </section>
