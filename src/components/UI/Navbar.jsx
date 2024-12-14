@@ -8,7 +8,7 @@ const Navbar = () => {
         {/* LOGO */}
         <section className="col-span-1">
           <section className="flex justify-start items-center">
-            <div className="bg-black p-2 rounded-tr-md rounded-br-md">
+            <div className="bg-black p-2 rounded-tr-md rounded-br-md hover:cursor-pointer">
               <Link href="/">
                 <h1 className="font-bold text-white text-2xl">BV</h1>
               </Link>
